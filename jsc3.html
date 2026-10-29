@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSC 3</title>
+</head>
+<body>
+    <h1>Estructuras de control en JS</h1>
+    <h2>Secuencia</h2>
+    <button id="dem1">Ver Ejemplo</button>
+    <p id="resultado1"></p>
+    <p id="resultado2"></p>
+    <h2>Condicionales</h2>
+    <p>If <button id="dem2">Ver Ejemplo</button></p>
+    <p>If else <button id="dem3">Ver Ejemplo</button></p>
+    <p>If else/if <button id="dem4">Ver Ejemplo</button></p>
+
+    <script>
+        let bot1 = document.getElementById("dem1")
+        let bot2 = document.getElementById("dem2")
+        let bot3 = document.getElementById("dem3")
+        let bot4 = document.getElementById("dem4")
+
+        bot1.addEventListener("click", function() {
+            let valor1 = prompt('Ingrese el primer número:');
+            let valor2 = prompt('Ingrese el segundo número:');
+
+            let res1 = document.getElementById("resultado1");
+            let res2 = document.getElementById("resultado2");
+            
+            let suma = parseInt(valor1) + parseInt(valor2);
+            let producto = parseInt(valor1) * parseInt(valor2);
+            
+            res1.innerHTML = 'La suma es: ' + suma;
+            res2.innerHTML = 'El producto es: ' + producto
+        })
+
+        bot2.addEventListener("click", function() {
+            let edad = prompt('Ingrese la edad:');
+            if (edad >= 18) {
+            alert("Puedes ingresar a esta sección");
+            }
+            });
+        
+        bot3.addEventListener("click", function() {
+        let edad = prompt('Ingrese la edad:');
+        if (edad >= 18) {
+        alert("Puedes ingresar a esta sección");
+        } else {
+        alert("NO Puedes ingresar a esta sección");
+        }
+        });
+
+        bot4.addEventListener("click", function() {
+        let nota = prompt('Ingrese la calificación:');
+        if (nota >= 9) {
+        alert("Excelente");
+        } else if (nota >= 6) {
+        alert("Aprobado");
+        } else {
+        alert("Debes recuperar");
+        }
+        });
+    </script>
+
+
+</body>
+</html>
